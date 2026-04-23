@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 260 72" role="img" aria-label="Personalised Finance">
+  <!-- House body -->
+  <rect x="4" y="32" width="36" height="28" rx="2" fill="#7ab648"/>
+  <!-- House roof -->
+  <polygon points="0,34 22,10 44,34" fill="#7ab648"/>
+  <!-- Door -->
+  <rect x="14" y="44" width="10" height="16" rx="1" fill="rgba(0,0,0,0.18)"/>
+  <!-- Key ring circle -->
+  <circle cx="52" cy="28" r="9" fill="none" stroke="#5b9ab5" stroke-width="4"/>
+  <!-- Key shaft -->
+  <rect x="52" y="28" width="20" height="4" rx="2" fill="#5b9ab5"/>
+  <!-- Key teeth -->
+  <rect x="67" y="32" width="3" height="5" rx="1" fill="#5b9ab5"/>
+  <rect x="61" y="32" width="3" height="4" rx="1" fill="#5b9ab5"/>
+  <!-- Text -->
+  <text x="80" y="36" font-family="Arial Rounded MT Bold, Arial, sans-serif" font-size="17" font-weight="700" fill="#ffffff" letter-spacing="0.2">personalised</text>
+  <text x="80" y="56" font-family="Arial Rounded MT Bold, Arial, sans-serif" font-size="17" font-weight="700" fill="#ffffff" letter-spacing="0.2">finance</text>
+</svg>
