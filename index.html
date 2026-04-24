@@ -599,7 +599,7 @@
     @media (max-width: 960px) {
       .hero__content { padding: 60px 32px 80px; min-height: auto; gap: 32px; }
       .hero__bottom { grid-template-columns: 1fr; gap: 32px; }
-      .hero__video { display: none; }
+      .hero__video { display: flex; }
       .hero__title { font-size: clamp(48px, 12vw, 72px); }
     }
     @media (max-width: 480px) {
@@ -1544,9 +1544,9 @@
           <div class="hero__video">
             <div class="hero__video-player">
               <iframe
-                src="https://www.youtube.com/embed/Yw3wjBM_D54?rel=0"
+                src="https://www.youtube.com/embed/Yw3wjBM_D54?rel=0&playsinline=1"
                 title="Hendy Limbri — Personalised Finance"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                 allowfullscreen>
               </iframe>
             </div>
