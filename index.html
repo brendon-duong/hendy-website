@@ -2107,7 +2107,7 @@
 
     // ── 5% Deposit / Citizen PR Form ──────────────────────────
     const prForm = document.getElementById('pr-form');
-    prForm.addEventListener('submit', e => {
+    prForm.addEventListener('submit', async e => {
       e.preventDefault();
       const valid = validateFields([
         { id: 'p-name',      errId: 'p-name-error' },
@@ -2116,7 +2116,24 @@
         { id: 'p-residency', errId: 'p-residency-error' },
         { id: 'p-employment',errId: 'p-employment-error' }
       ]);
-      if (valid) showSuccess(prForm);
+      if (!valid) return;
+      try {
+        const res = await fetch('https://formspree.io/f/mjgjqjne', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+          body: JSON.stringify({
+            name:       document.getElementById('p-name').value,
+            phone:      document.getElementById('p-phone').value,
+            email:      document.getElementById('p-email').value,
+            city:       document.getElementById('p-city').value,
+            residency:  document.getElementById('p-residency').value,
+            employment: document.getElementById('p-employment').value,
+          })
+        });
+        if (res.ok) showSuccess(prForm);
+      } catch (_) {
+        showSuccess(prForm);
+      }
     });
     clearOnInput(['p-name','p-phone','p-email','p-residency','p-employment']);
 
